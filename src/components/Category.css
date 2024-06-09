@@ -1,4 +1,10 @@
-.business{
-    border: 1px solid red;
-    color: red;
+
+.categories{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(195, 156, 232);
+}
+.business input[type=radio] {
+ background: red;
 }

@@ -42,13 +42,11 @@ export const TodoWrapper = () => {
     setTodos(todos.map(todo => todo.id ===id ? {...todo, task, isEditing:!todo.isEditing} :todo))
    }
 
-   const selectCategory =(category)=>{
-      category.business ? { categories:business}:{categories:personal}
-   }
+   
   return (
     <div className="todoWrapper">
         <TodoForm  addTodo={addTodo} />
-         <Category selectCategory={selectCategory}/> 
+         <Category /> 
           
 
         {todos.map((todo)=>
