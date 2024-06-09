@@ -16,7 +16,9 @@ export const TodoWrapper = () => {
        {id:uuidv4(),
         task:todo, 
         completed:false, 
-        isEditing:false
+        isEditing:false,
+        categories:""
+
       },
 
     ]);
@@ -26,7 +28,7 @@ export const TodoWrapper = () => {
   const toggleComplete = id=>{
     setTodos(
       todos.map(todo=>
-       todo.id === id ? {...todo, completed : !todo.completed} : todo
+       todo.id === id ? {...todo, completed : !todo.completed, } : todo
       )
     );
   }
@@ -39,15 +41,20 @@ export const TodoWrapper = () => {
    const editTask = (task, id) =>{
     setTodos(todos.map(todo => todo.id ===id ? {...todo, task, isEditing:!todo.isEditing} :todo))
    }
+
+   const selectCategory =(category)=>{
+      category.business ? { categories:business}:{categories:personal}
+   }
   return (
     <div className="todoWrapper">
-        <TodoForm  addTodo={addTodo}/>
-         <Category/>
+        <TodoForm  addTodo={addTodo} />
+         <Category selectCategory={selectCategory}/> 
+          
 
         {todos.map((todo)=>
           todo.isEditing ? 
           (
-          <EditTodoForm editTodo={editTask} task={todo}/>
+          <EditTodoForm editTodo={editTask} task={todo}  />
         ):(
          <Todo 
          key={todo.id} 

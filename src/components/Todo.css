@@ -24,3 +24,9 @@
 .delete-icon{
     cursor:pointer;
 }
+.personal {
+    background: red;
+}
+.business{
+    color:blue
+}
