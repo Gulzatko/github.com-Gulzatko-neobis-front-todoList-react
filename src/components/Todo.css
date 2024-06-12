@@ -24,9 +24,10 @@
 .delete-icon{
     cursor:pointer;
 }
-.personal {
-    background: red;
+.checkbox-blue{
+   
+    box-shadow: inset 0px 0px 2px 2px blue;
 }
-.business{
-    color:blue
+.checkbox-pink{
+    box-shadow: inset 0px 0px 2px 2px pink;
 }

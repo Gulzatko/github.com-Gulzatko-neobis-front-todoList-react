@@ -5,16 +5,39 @@
     justify-content:space-between;
     align-items: center;
 }
-.business > input[type=checkbox] {
- width:20px;
- height: 20px;
- border:2px solid red;
- 
-
+.categories input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    outline:none;
+    transition: 0.2s all linear;
+    cursor:pointer;
+    width:32px;
+    height: 32px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    box-shadow: inset 0px 0px 2px 2px blueviolet
 }
-.personal > input[type=checkbox]{
-    width:20px;
-    height:20px;
-    
-    
+.categories input:before{
+    content:"";
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin:20% auto;
+    border-radius: 50%;
+}
+
+
+.business > input[type=radio]:checked:before {
+   background: blueviolet;
+  
+ 
+}
+.personal > input[type=radio]{
+    box-shadow: inset 0px 0px 2px 2px pink !important; 
+}
+.personal > input[type=radio]:checked:before{
+   background: pink;
 }
