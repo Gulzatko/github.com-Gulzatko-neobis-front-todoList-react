@@ -46,7 +46,7 @@ export const TodoWrapper = () => {
   return (
     <div className="todoWrapper">
       <TodoForm addTodo={addTodo} />
-      <Category/>
+      <Category  />
 
 
       {todos.map((todo) =>
