@@ -5,6 +5,15 @@
     align-items: center;
     color: rgb(195, 156, 232);
 }
-.business input[type=radio] {
- background: red;
+.business input[type=checkbox] {
+ width:20px;
+ height: 20px;
+ 
+
+}
+.personal input[type=checkbox]{
+    width:20px;
+    height: 20px;
+    
+    
 }

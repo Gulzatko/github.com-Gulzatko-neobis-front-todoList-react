@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
-import './Category.css';
+import { CategoryInput } from './CategoryInput';
 
-export const Category=({selectCategory})=> {
-  
-   
-   
+export const Category =()=> {
+    const [category, setCategory] = useState({ business: "", personal: ""});
+    return (
+        <div>
+             <CategoryInput 
+        type="checkbox"
+       value={category.business} 
+       onClick={e => 
+       setCategory({ ...category, business: e.target.value })} 
+       />
+        <CategoryInput
+        type="checkbox"
+        value={category.personal}
+         onClick={e => 
+         setCategory({ ...category, personal: e.target.value })} 
+         />
 
-  return (
-    <div className ="categories">
-        <div className ="business">
-        <label for="Business">Business</label>
-          <input  type="radio" value="Business" className="" checked/>
-          </div>
-          <div>
-          <label for="Personal">Personal</label>
-          <input type="radio" value="Personal" className = "personal"/>
-          </div>
-      </div>
-  )
-}
+        </div>
+       
+    )
+  }
+
+
