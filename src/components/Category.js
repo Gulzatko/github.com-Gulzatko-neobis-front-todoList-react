@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
-import "./Category.css";
+import "../style/Category.css";
+
 export const Category = ({ setCategory }) => {
    const handleClick = (e) => {
       const radioInput = e.target.closest(".categories__radio");

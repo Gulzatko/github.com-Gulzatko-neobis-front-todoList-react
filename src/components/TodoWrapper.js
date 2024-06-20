@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./TodoWrapper.css";
+import "../style/TodoWrapper.css";
 import { Category } from "./Category";
 import { TodoForm } from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";

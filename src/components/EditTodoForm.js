@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./TodoForm.css";
+import "../style/TodoForm.css";
 
 
 export const EditTodoForm =({editTodo, task}) => {
